@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Exit
   - Enemy
+  - Food
+  - Soda
   layers:
   - Default
   - TransparentFX
