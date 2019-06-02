@@ -70,6 +70,7 @@ public class BoardManager : MonoBehaviour
         int randomIndex = Random.Range(0, gridPositions.Count);
         Vector3 randomPosition = gridPositions[randomIndex];
         gridPositions.RemoveAt(randomIndex);
+        return randomPosition;
     }
 
     void LayoutObjectAtRandom(GameObject[] tileArray, int minimuim, int maximum)
@@ -80,7 +81,7 @@ public class BoardManager : MonoBehaviour
         {
             Vector3 randomPosition = RandomPosition();
             GameObject tileChoice = tileArray[Random.Range(0, tileArray.Length)];
-            Instantiate(tileChoice, randomPosition, Quaternion.identify);
+            Instantiate(tileChoice, randomPosition, Quaternion.identity);
         }
     }
     public void SetupScene(int level)
@@ -91,6 +92,6 @@ public class BoardManager : MonoBehaviour
         LayoutObjectAtRandom(foodtiles, foodCount.minimum, foodCOunt.maximum);
         int enemyCount = (int)Mathf.Log(level, 2f);
         LayoutObjectAtRandom(enemyTiles, enemyCount, enemyCount);
-        Instantiate(exit, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identify);
+        Instantiate(exit, new Vector3(columns - 1, rows - 1, 0f), Quaternion.identity);
     }
 }

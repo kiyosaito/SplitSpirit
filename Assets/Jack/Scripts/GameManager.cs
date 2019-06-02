@@ -14,14 +14,10 @@ public class GameManager : MonoBehaviour
     void Awake()
     {
         boardScript = GetComponent<BoardManager>();
-        IntGame();
+        InitGame();
     }
 
-    private void IntGame()
-    {
-        throw new NotImplementedException();
-    }
-
+   
     void InitGame()
     {
         boardScript.SetupScene(level);
