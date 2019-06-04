@@ -5,14 +5,21 @@ using System;
 
 public class GameManager : MonoBehaviour
 {
-
+    public static GameManager instance = null;
     public BoardManager boardScript;
+
 
     private int level = 3;
 
     // Start is called before the first frame update
     void Awake()
     {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else if (instance != this)
+            Destroy(gameObject);
         boardScript = GetComponent<BoardManager>();
         InitGame();
     }
@@ -22,7 +29,11 @@ public class GameManager : MonoBehaviour
     {
         boardScript.SetupScene(level);
     }
-    // Update is called once per frame
+    
+    public void GameOver()
+    {
+        enabled = false;
+    }
     void Update()
     {
         
