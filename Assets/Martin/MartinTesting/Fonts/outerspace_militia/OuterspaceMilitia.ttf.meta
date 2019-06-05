@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ae0e10327f692da4d911a4c6f4f9af97
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Outerspace Militia
+  fontNames:
+  - Outerspace Militia
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 304badda80b0e1849b683d94639d5503, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
