@@ -1,8 +1,9 @@
 ﻿// =========================================================
 // Title: PlayerManager
-// Author(s): Martin Nguyen
+// Author(s): Martin Nguyen,
 // Date: 05/06/2019
-// Details: handles player movement,animation according interaction,
+// Details: handles player movement,animation according interaction, 
+// Reference: Jack Adam-De-Villiers
 // =========================================================
 
 using System.Collections;
