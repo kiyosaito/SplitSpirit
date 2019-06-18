@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Martin/MartinTesting/Scenes/Menu.unity
+    guid: 5610f043fd134c147979b78ccdc76888
+  - enabled: 1
+    path: Assets/Martin/MartinTesting/Scenes/SuperFunTimes.unity
+    guid: 5c1a5952fe705a4419a81b051d0c8450
+  - enabled: 1
+    path: Assets/Martin/MartinTesting/Scenes/SuperFunTimesLevel2.unity
+    guid: feab193ca9f86164ab881110a21bad8b
+  - enabled: 1
+    path: Assets/Martin/MartinTesting/Scenes/SuperFunTimesLevel3.unity
+    guid: 6e2c500205fd9e04dae98621275791b3
   m_configObjects: {}
