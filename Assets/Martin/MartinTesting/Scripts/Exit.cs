@@ -53,6 +53,6 @@ public class Exit : MonoBehaviour
     }
     public void LoadSpecificScene(int index)
     {
-        SceneManager.LoadScene(index);
+        SceneManager.LoadScene(index); // Loads what ever scene I reference in the inspector
     }
 }
