@@ -5794,6 +5794,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
+      propertyPath: adClips.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
+      propertyPath: adSource
+      value: 
+      objectReference: {fileID: 241825567}
+    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
+      propertyPath: adClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f43f23372535bdb4ca33a25e73727a0f, type: 3}
     - target: {fileID: 2397641645051959273, guid: 6ec6b9b8e26b29847bb714a62b815eea,
         type: 3}
       propertyPath: m_SortingLayerID
@@ -5809,18 +5821,6 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
-      propertyPath: adClips.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
-      propertyPath: adSource
-      value: 
-      objectReference: {fileID: 241825567}
-    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
-      propertyPath: adClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: f43f23372535bdb4ca33a25e73727a0f, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
 --- !u!1 &1349719407

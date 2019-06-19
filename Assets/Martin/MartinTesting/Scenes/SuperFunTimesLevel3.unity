@@ -35623,7 +35623,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -55462,6 +55462,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
+      propertyPath: adClips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
+      propertyPath: adClips.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: c8740026f94160747bcd57ccc5fcdf72, type: 3}
+    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
+      propertyPath: adClips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: aee1c84b478901e4586fd2d25a5ea8a1, type: 3}
+    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
+      propertyPath: adClips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: c2c17f32f0e44ed4d9f1f05dad5fc3a7, type: 3}
+    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
+      propertyPath: adSource
+      value: 
+      objectReference: {fileID: 83599773}
     - target: {fileID: 1028860032, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -55486,25 +55506,5 @@ PrefabInstance:
       propertyPath: m_BackGroundColor.b
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
-      propertyPath: adClips.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
-      propertyPath: adClips.Array.data[0]
-      value: 
-      objectReference: {fileID: 8300000, guid: c8740026f94160747bcd57ccc5fcdf72, type: 3}
-    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
-      propertyPath: adClips.Array.data[1]
-      value: 
-      objectReference: {fileID: 8300000, guid: aee1c84b478901e4586fd2d25a5ea8a1, type: 3}
-    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
-      propertyPath: adClips.Array.data[2]
-      value: 
-      objectReference: {fileID: 8300000, guid: c2c17f32f0e44ed4d9f1f05dad5fc3a7, type: 3}
-    - target: {fileID: 519420030, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}
-      propertyPath: adSource
-      value: 
-      objectReference: {fileID: 83599773}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ec6b9b8e26b29847bb714a62b815eea, type: 3}

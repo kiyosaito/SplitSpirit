@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Martin/MartinTesting/Scenes/SuperFunTimesLevel3.unity
     guid: 6e2c500205fd9e04dae98621275791b3
+  - enabled: 1
+    path: Assets/Martin/MartinTesting/Scenes/End.unity
+    guid: 84cd7e1f8a800de4897e4835f722149e
   m_configObjects: {}
