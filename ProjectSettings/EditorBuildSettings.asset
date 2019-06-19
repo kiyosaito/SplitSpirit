@@ -9,8 +9,8 @@ EditorBuildSettings:
     path: Assets/Martin/MartinTesting/Scenes/Menu.unity
     guid: 5610f043fd134c147979b78ccdc76888
   - enabled: 1
-    path: Assets/Martin/MartinTesting/Scenes/SuperFunTimes.unity
-    guid: 5c1a5952fe705a4419a81b051d0c8450
+    path: Assets/Martin/MartinTesting/Scenes/SuperFunTimes 1.unity
+    guid: 5fff2f6ae89318b4aa2a8cd04a5ad726
   - enabled: 1
     path: Assets/Martin/MartinTesting/Scenes/SuperFunTimesLevel2.unity
     guid: feab193ca9f86164ab881110a21bad8b
