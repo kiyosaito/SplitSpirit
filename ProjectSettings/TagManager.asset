@@ -9,6 +9,7 @@ TagManager:
   - Food
   - Soda
   - AudioManager
+  - WayPoint
   layers:
   - Default
   - TransparentFX
