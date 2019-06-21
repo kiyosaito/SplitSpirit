@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class WarriorPatrol : MonoBehaviour
 {
     public Transform waypointParent;
@@ -48,7 +48,9 @@ public class WarriorPatrol : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
-            collision.gameObject.GetComponent<PlayerManager>().TakeDamage(damage);
+            collision.gameObject.SetActive(false);
+            //collision.gameObject.GetComponent<PlayerManager>().TakeDamage(damage);
+            SceneManager.LoadScene("Menu");
         }
     }
     
