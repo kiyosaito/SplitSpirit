@@ -44,8 +44,12 @@ public class WarriorPatrol : MonoBehaviour
         wavepointIndex++;
         target = waypoints[wavepointIndex];
     }
-    void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        other.gameObject.GetComponent<PlayerManager>().TakeDamage(damage);
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.GetComponent<PlayerManager>().TakeDamage(damage);
+        }
     }
+    
 }
