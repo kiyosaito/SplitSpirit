@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Martin/MartinTesting/Scenes/Menu.unity
+    guid: 5610f043fd134c147979b78ccdc76888
+  - enabled: 1
     path: Assets/Martin/MartinTesting/Scenes/SuperFunTimes.unity
     guid: 5c1a5952fe705a4419a81b051d0c8450
   - enabled: 1
