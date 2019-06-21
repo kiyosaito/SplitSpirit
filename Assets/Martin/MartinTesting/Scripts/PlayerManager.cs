@@ -9,6 +9,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -18,6 +19,15 @@ public class PlayerManager : MonoBehaviour
     private Animator anim;
     private SpriteRenderer rend;
     private Rigidbody2D rigid;
+
+    [Header("Player Stats")]
+    public float curHealth;
+    public float maxHealth;
+
+    public Image[] heartSlots;
+    public Sprite[] hearts;
+    public float healthPerSection;
+    public bool alive = true;
     #endregion
     void Start()
     {
@@ -25,11 +35,15 @@ public class PlayerManager : MonoBehaviour
         anim = GetComponent<Animator>();
         rend = GetComponent<SpriteRenderer>();
         rigid = GetComponent<Rigidbody2D>();
+        //UpdateHearts();
+        alive = true;
     }
 
     void Update()
     {
         Move();
+        //Heart();
+        
     }
 
     void Move() //Function for movement going horizontal and vertical on x and y axis
@@ -44,5 +58,47 @@ public class PlayerManager : MonoBehaviour
         rend.flipX = inputH < 0;
         rigid.MovePosition(rigid.position + motion * Time.deltaTime);
 
+    }
+
+    public void TakeDamage(float amount)
+    {
+        if (!alive)
+        {
+            return;
+        }
+        if (curHealth<=0)
+        {
+            curHealth = 0;
+            alive = false;
+            gameObject.SetActive(false);
+        }
+        curHealth -= amount;
+    }
+    void Heart()
+    {
+        int i = 0;
+        foreach (Image slot in heartSlots)
+        {
+            if (curHealth >= ((healthPerSection * 1)) + healthPerSection * 2 * i)
+            {
+                heartSlots[i].sprite = hearts[0];
+            }
+            else if (curHealth >= ((healthPerSection * 1)) + healthPerSection * 2 * i)
+            {
+                heartSlots[i].sprite = hearts[1];
+            }
+            
+            else
+            {
+                heartSlots[i].sprite = hearts[2];
+            }
+
+            i++;
+        }
+    }
+    void UpdateHearts()
+    {
+        //calculate the health points per heart section
+        healthPerSection = maxHealth / (heartSlots.Length * 2);
     }
 }

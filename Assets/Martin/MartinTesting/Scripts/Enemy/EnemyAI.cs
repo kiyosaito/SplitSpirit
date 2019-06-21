@@ -8,46 +8,83 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    //Enemy Variables
-    public float speed = 5f;
+    #region Variables
+    public State currentState;
+    public Transform waypointParent;
+    public float movespeed = 2f;
+    public float stoppingDistance = 1f;
 
-    //other variables
-    public Transform target;
-    private int wavepointIndex = 0;
-    public static Transform[] points;
-
-    private void Awake()
-    {
-        //On game start detects the waypoints from the children of the gameobject
-        points = new Transform[transform.childCount];
-        for (int i = 0; i < points.Length; i++)
-        {
-            points[i] = transform.GetChild(i);
-        }
-    }
+    public Transform[] waypoints;
+    private int currentIndex = 1;
+    private NavMeshAgent agent;
+    private Transform target;
+    #endregion
     void Start()
     {
-        target = points[0];
+        waypoints = waypointParent.GetComponentsInChildren<Transform>();
+        currentState = State.Patrol;
     }
 
     void Update()
     {
-        //movement
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
-        //next waypoint and loop
-        if(Vector3.Distance(transform.position,target.position)<=0.5f)
+        switch (currentState)
         {
-            if (wavepointIndex>=points.Length - 1)
+            case State.Patrol:
+                Patrol();
+                break;
+            case State.seek:
+                Seek();
+                break;
+            default:
+                Patrol();
+                break;
+        }
+    }
+
+    void Patrol()
+    {
+        Transform point = waypoints[currentIndex];
+
+        float distance = Vector3.Distance(transform.position, point.position);
+
+        if (distance < stoppingDistance)
+        {
+            currentIndex++;
+            if (currentIndex >= waypoints.Length)
             {
-                wavepointIndex = 0;
-                return;
+                currentIndex = 1;
             }
-            wavepointIndex++;
-            target = points[wavepointIndex];
+        }
+        agent.SetDestination(point.position);
+    }
+
+    void Seek()
+    {
+        agent.SetDestination(target.position);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            target = other.transform;
+            currentState = State.seek;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            currentState = State.Patrol;
         }
     }
 }
+public enum State
+    {
+        Patrol, seek
+    }
